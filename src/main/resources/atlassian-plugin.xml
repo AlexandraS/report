@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+  <plugin-info>
+    <description>${project.description}</description>
+    <version>${project.version}</version>
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+  </plugin-info>
+  <resource type="i18n" name="i18n" location="com.report.plugin.hyc.report"/>
+  <report name="module" i18n-name-key="i18n" key="key" class="com.report.plugin.hyc.jira.reports.MyReport">
+    <description key="descritionKey">description</description>
+    <resource name="view" type="velocity" location="q"/>
+    <resource name="i18n" type="i18n" location="MyReport"/>
+    <label key="my-report.label"></label>
+    <!-- the properties of this report which the user must select before running it -->
+    <!-- Uncomment and edit properties...  
+    <properties>
+    	<property>
+                <key>projectid</key>
+                <name>report.issuecreation.projectid.name</name>
+                <description>report.issuecreation.projectid.description</description>
+                <type>select</type>
+               <values class="com.atlassian.jira.portal.ProjectValuesGenerator"/>
+           </property>     
+        <property>
+            <key>versionId</key>
+            <name>common.concepts.version</name>
+            <description>report.timetracking.version.description</description>
+            <type>select</type>
+            <values class="com.atlassian.jira.portal.VersionOptionalValuesGenerator"/>
+        </property>
+        <property>
+            <key>sortingOrder</key>
+            <name>report.timetracking.sortingorder</name>
+            <description>report.timetracking.sortingorder.description</description>
+            <type>select</type>
+            <values class="com.atlassian.jira.portal.SortingValuesGenerator"/>
+        </property>
+        <property>
+    		<key>UserStoryID</key>
+    		<name>User Story ID</name>
+    		<type>select</type>
+    		<values>com.atlassian.jira.bc.user.search</values>
+    	</property>     
+    </properties>--> 
+
+  </report>
+</atlassian-plugin>
